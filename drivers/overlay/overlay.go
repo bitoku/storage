@@ -879,7 +879,7 @@ func (d *Driver) Cleanup() error {
 
 // SyncMode returns the sync mode configured for the driver.
 func (d *Driver) SyncMode() graphdriver.SyncMode {
-	return d.options.syncMode
+	return graphdriver.SyncModeFilesystem // Enforce sync
 }
 
 // pruneStagingDirectories cleans up any staging directory that was leaked.

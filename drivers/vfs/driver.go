@@ -113,7 +113,7 @@ func (d *Driver) Cleanup() error {
 
 // SyncMode returns the sync mode configured for the driver.
 func (d *Driver) SyncMode() graphdriver.SyncMode {
-	return d.syncMode
+	return graphdriver.SyncModeFilesystem // Enforce sync
 }
 
 type fileGetNilCloser struct {
